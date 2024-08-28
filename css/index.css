@@ -1,0 +1,233 @@
+/* 초기화 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none; /* a태그 밑줄 없애기 */
+}
+
+li {
+  list-style: none; /* 리스트 블릿기호 없애기 */
+}
+
+/* header,
+section,
+footer,
+.wrapper {
+  border: 1px solid black;
+} */
+
+.wrapper {
+  max-width: 1300px;
+  margin: 0 auto; /* 중간 정렬 */
+}
+
+header,
+section:nth-child(2n + 1) {
+  background-color: #34495e;
+}
+
+/* 헤더 메뉴 토글 */
+header nav {
+  background: #34495e;
+}
+
+nav a#toggle {
+  display: block;
+  background-color: #283744;
+  line-height: 40px;
+  padding-left: 15px;
+}
+
+header nav a img {
+  margin-top: 10px;
+}
+
+/* PC 모드 메뉴 */
+header nav ul {
+  display: none; /* 모바일모드일땐 숨김 */
+}
+
+header nav ul li {
+  text-align: center;
+  border-bottom: 1px solid #576979;
+}
+
+header nav ul li a {
+  color: #fff;
+  line-height: 50px;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* 반응형 웹 PC모드_네비게이션 */
+@media screen and (min-width: 768px) {
+  header nav ul {
+    display: block !important; /* PC모드에서 네비게이션 보임 */
+    height: 80px;
+  }
+
+  header nav ul li {
+    float: left;
+    width: 24%;
+    border-bottom: 0;
+    border-right: 1px solid #576979;
+  }
+
+  header nav ul li:last-child {
+    border-right: 0; /* 마지막 리스트 오른쪽 보더 없애기 */
+  }
+
+  header nav ul li a {
+    line-height: 80px;
+  }
+
+  nav a#toggle {
+    display: none; /* PC모드에서 토글메뉴 숨김 */
+  }
+}
+
+/* 공통 섹션 */
+section .wrapper {
+  padding: 60px 0 40px 0;
+}
+
+section:nth-child(2n + 1) {
+  background-color: #e3e3e3;
+}
+
+section .section_title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* 섹션2 코딩이란 : 플렉스 적용 안함 */
+section#coding_about .section_content {
+  padding: 20px 50px;
+}
+
+section#coding_about .section_content p {
+  color: #ff6600;
+  font-weight: bolder;
+  font-size: 1.4em;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.8em;
+  margin: 30px;
+}
+
+/* 섹션3 왜 코딩 교육인가 : 플렉스 적용, 좌우2개 항목 */
+section#coding_why .section_content {
+  padding: 70px 80px;
+}
+
+section#coding_why .content_text {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
+
+section#coding_why .content_img {
+  display: none; /* 모바일 모드에서 이미지 숨김 */
+}
+
+/* 반응형 웹 PC모드_섹션3 왜 코딩 교육인가 */
+@media screen and (min-width: 768px) {
+  section#coding_why .content_img {
+    display: block; /* PC모드에서 이미지 보이게 하기 */
+    flex: 1;
+    text-align: center;
+    margin-left: 40px;
+  }
+
+  section#coding_why .content_text {
+    flex: 2;
+  }
+
+  section#coding_why .section_content {
+    display: flex; /* 플렉스 박스 적용, 항목가로 정렬 */
+    align-items: center; /* 교차축을 기준으로 하는 세로 가운데 배치 */
+  }
+
+  section#coding_why .content_img img {
+    width: 200px;
+  }
+}
+
+/* 섹션4 코딩 프로그램 : 플렉스 적용, */
+section#coding_pro .section_content {
+  padding: 60px 40px;
+}
+section#coding_pro div.program {
+  border: 1px solid #aaa;
+  background-color: #fff;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+section#coding_pro div.program h4 {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+}
+
+/* 반응형웹 PC모드_섹션4 코딩 프로그램 */
+@media screen and (min-width: 768px) {
+  section#coding_pro .section_content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  section#coding_pro div.program {
+    width: 22%;
+  }
+}
+
+/* 푸터 모바일 모드 */
+footer {
+  background-color: #34495e;
+  color: #fff;
+}
+
+footer .wrapper {
+  padding: 60px 20px;
+}
+
+footer article#content p {
+  margin-bottom: 5px;
+}
+
+footer article#sns {
+  margin-top: 40px;
+}
+
+footer article#sns a {
+  margin-right: 30px;
+}
+
+/* 반응형웹 PC모드_푸터 */
+@media screen and (min-width: 768px) {
+  footer .wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* 페이지 top 부분 */
+#top_btn {
+  background: rgba(100, 100, 100, 0.5);
+  color: #fff;
+  width: 80px;
+  text-align: center;
+  position: fixed;
+  right: 0px;
+  bottom: 150px; /* 위치를 절대값으로 고정 */
+  transform: rotate(90deg); /* 90도 돌리기 */
+  border-radius: 10px;
+  display: none; /*스크롤 되기전에는 Top버튼 숨기기*/
+}
+
+#top_btn:hover {
+  background: rgba(100, 100, 100, 0.7);
+}

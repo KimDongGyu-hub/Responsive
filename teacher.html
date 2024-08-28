@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형웹_코딩</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+
+    <!-- 임포팅 방식으로 제이쿼리 삽입하기 -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+
+    <!-- 캐러셀 이미지 구현을 위한 제이쿼리-->
+    <script src="js/jquery.bxslider.js"></script>
+    <link rel="stylesheet" href="css/jquery.bxslider.css" />
+  </head>
+  <body>
+    <!-- 헤더 토글 메뉴 -->
+    <header>
+      <nav class="wrapper">
+        <!-- Mobile 모드 메뉴 -->
+        <a href="#" id="toggle"><img src="img/but_toggle.png" /></a>
+        <!-- PC 모드 메뉴 -->
+        <ul>
+          <li><a href="#">처음으로</a></li>
+          <li><a href="#">코딩이란</a></li>
+          <li><a href="#">왜 코딩 교육인가</a></li>
+          <li><a href="#">교육프로그램</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- 메인 캐러셀 이미지-->
+    <section id="main_imge">
+      <div class="wrapper">
+        <div class="slider">
+          <div><img src="img/index_header.jpg" /></div>
+          <div><img src="img/index_header2.jpg" /></div>
+          <div><img src="img/index_header3.jpg" /></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 코딩이란 : 플렉스 적용 안함 -->
+    <section id="coding_about">
+      <div class="wrapper">
+        <article class="section_title">
+          <h3>코딩이란</h3>
+        </article>
+        <article class="section_content">
+          <p><img src="img/quot-1.png" /></p>
+          <p>
+            코딩은 사고의 범위를 넓혀 주고, 더나은 생각을 할 수 있게 만들며,
+            분야에 상관없이 모든 문제에 대해 새로운 해결책을 생각할 수 있는 힘을
+            길러주는 것
+          </p>
+          <p><img src="img/quot-2.png" /></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 왜 코딩 교육인가 : 플렉스 적용, 좌우 2개 항목 -->
+    <section id="coding_why">
+      <div class="wrapper">
+        <article class="section_title">
+          <h3>왜 코딩교육인가</h3>
+        </article>
+        <article class="section_content">
+          <div class="content_text">
+            <p>
+              코딩교육은 앞으로 미래 사회를 살아가는데 있어서 IT분야에서 일하는
+              사람들 뿐만 아니라 일반인에게도 꼭 필요한 공부입니다. 프로그램을
+              다룰 수 있는 코딩 언어를 알고 있다면 평소 자신이 생각했던
+              프로그램을 스스로 개발해서 실생활에 활용할 수 있습니다.
+            </p>
+          </div>
+          <div class="content_img">
+            <p><img src="img/index_coding.png" /></p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- 코딩 프로그램 : 플렉스 적용, 여러 항목 배치 -->
+    <section id="coding_pro">
+      <div class="wrapper">
+        <article class="section_title">
+          <h3>교육 프로그램</h3>
+        </article>
+        <article class="section_content">
+          <div class="program">
+            <h4>언플러그드 활동</h4>
+            <p>
+              컴퓨터 과학의 개념이나 원리를 스토리텔링으로 풀어가거나 학습지를
+              풀어가며 이해할 수도 있고 신체를 움직여 직접 확동하기도 합니다.
+            </p>
+          </div>
+          <div class="program">
+            <h4>스크래치</h4>
+            <p>
+              스크래치는 초보자들이 재미있게 프로그래밍을 익힐 수 있도록 고안된
+              프로그래밍언어입니다. 게임이나 애니메이션과 같은 것을 쉽게 만들 수
+              있도록 고안되어 있기 때문에 어렵지 않게 프로그래밍 기법들을 익힐
+              수 있습니다.
+            </p>
+          </div>
+          <div class="program">
+            <h4>엔트리</h4>
+            <p>
+              엔트리는 국내에서 만들어진 교육용 프로그래밍 언어입니다. 어려운
+              텍스트 형식의 프로그래밍 언어 대신, 블록을 조립하듯 누구나 쉽게
+              프로그래밍을 시작 할 수 있습니다. 모든 교육 자료를 홈페이지에서
+              무료로 배포합니다.
+            </p>
+          </div>
+          <div class="program">
+            <h4>피지컬 컴퓨링</h4>
+            <p>
+              센서를 이용해 사용자 동작에 반응하게 하거나 로봇을 움직여가며
+              코딩을 배울 수도 있습니다. 아두이노를 비롯해 아두이노를 기반으로
+              하는 다양한 마이크로컨트롤러를 사용합니다.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+      <div class="wrapper">
+        <article id="content">
+          <p>서울 특별시 XX구 XXX로 XX길 XXXXXXXX / 대표 : OOO</p>
+          <p>사업자등록번호 : ㅁㅁㅁ-ㅁㅁ-ㅁㅁㅁㅁ</p>
+          <p>전화 : XXXX - XXXX / 팩스 : XX - XXXX - XXXX</p>
+          <p>이메일 : aaa@aaa.aaa</p>
+        </article>
+        <article id="sns">
+          <a href="#"><img src="img/fb.png" /></a>
+          <a href="#"><img src="img/tw.png" /></a>
+          <a href="#"><img src="img/ytube.png" /></a>
+          <a href="#"><img src="img/gp.png" /></a>
+        </article>
+      </div>
+    </footer>
+    <!-- 페이지 Top 버튼 -->
+    <a id="top_a" href="#top">
+      <nav id="top_btn">Top</nav>
+    </a>
+
+    <!-- 캐러셀 구현을 위한 제이쿼리 플러그인 스크립트 소스 연결 -->
+    <script>
+      $(document).ready(function () {
+        $(".slider").bxSlider({
+          auto: true,
+          autoControls: true,
+          stopAutoOnClick: true,
+          pager: true,
+          speed: 300,
+          randomStart: true,
+        });
+      });
+    </script>
+
+    <!-- 토글 메뉴 구현을 위한 제이쿼리 플러그인 스크립트 소스 연결 -->
+    <script>
+      $(function () {
+        // 토글 메뉴 플러그인 실행
+        var toggle = $("#toggle");
+        var menu = $("nav ul");
+        $(toggle).on("click", function (e) {
+          e.preventDefault(); // a태그를 눌럿을때도 href 링크로 이동하지 않게 할 경우
+          menu.slideToggle();
+        });
+      });
+    </script>
+
+    <!-- scroll 이벤트에 대한 Top버튼 제어 -->
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > 100) {
+          $("#top_btn").show();
+          // $("#top_btn").fedeIn();
+        } else {
+          $("#top_btn").hide();
+          // $("#top_btn").fadeOut();
+        }
+      });
+    </script>
+  </body>
+</html>
