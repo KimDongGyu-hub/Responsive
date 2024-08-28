@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>반응형웹_코딩</title>
-    <link rel="stylesheet" type="text/css" href="./css/teacher.css" />
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
 
     <!-- 임포팅 방식으로 제이쿼리 삽입하기 -->
     <script src="js/jquery-3.7.1.min.js"></script>
@@ -22,9 +22,9 @@
         <!-- PC 모드 메뉴 -->
         <ul>
           <li><a href="#">처음으로</a></li>
-          <li><a href="#">코딩이란</a></li>
-          <li><a href="#">왜 코딩 교육인가</a></li>
-          <li><a href="#">교육프로그램</a></li>
+          <li><a href="#coding_about">코딩이란</a></li>
+          <li><a href="#coding_why">왜 코딩 교육인가</a></li>
+          <li><a href="#coding_pro">교육프로그램</a></li>
         </ul>
       </nav>
     </header>
@@ -139,9 +139,9 @@
       </div>
     </footer>
     <!-- 페이지 Top 버튼 -->
-    <a id="top_a" href="#top">
-      <nav id="top_btn">Top</nav>
-    </a>
+    <nav id="top_a" href="#top">
+      <a id="top_btn">Top</a>
+    </nav>
 
     <!-- 캐러셀 구현을 위한 제이쿼리 플러그인 스크립트 소스 연결 -->
     <script>
@@ -180,6 +180,16 @@
           $("#top_btn").hide();
           // $("#top_btn").fadeOut();
         }
+      });
+    </script>
+    <!-- 스크롤 기능을 위한 자바스크립트 제이쿼리 삽입  -->
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script>
+      $(function () {
+        $("nav a").click(function (e) {
+          $.scrollTo(this.hash || 0, 300); /* 속도조절 */
+          e.preventDefault();
+        });
       });
     </script>
   </body>
